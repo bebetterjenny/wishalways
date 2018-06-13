@@ -97,3 +97,5 @@ setup/src/.htaccess
 setup/view/.htaccess
 var/.htaccess
 vendor/.htaccess
+
+php.ini
