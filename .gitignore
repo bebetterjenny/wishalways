@@ -68,7 +68,7 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 
-!.htaccess
+.htaccess
 !app/.htaccess
 !bin/.htaccess
 !dev/.htaccess
