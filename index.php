@@ -18,6 +18,12 @@
  * See COPYING.txt for license details.
  */
 
+if(!$_SERVER['HTTPS'] || strtolower($_SERVER['HTTPS']) != 'on' ){
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location: https://' . str_replace('www.','',$_SERVER['HTTP_HOST']) . $_SERVER['REQUEST_URI']);
+    exit();
+}
+
 try {
     require __DIR__ . '/app/bootstrap.php';
 } catch (\Exception $e) {
@@ -32,6 +38,7 @@ try {
 HTML;
     exit(1);
 }
+
 
 $bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
 /** @var \Magento\Framework\App\Http $app */
