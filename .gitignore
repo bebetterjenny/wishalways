@@ -99,3 +99,4 @@ atlassian*
 !vendor/.htaccess
 
 php.ini
+index.php
