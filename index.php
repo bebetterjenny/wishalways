@@ -18,7 +18,7 @@
  * See COPYING.txt for license details.
  */
 
-if(!$_SERVER['HTTPS'] || strtolower($_SERVER['HTTPS']) != 'on' ){
+if($_SERVER['HTTP_X_FORWARDED_PROTO'] !== "https" ){
     header("HTTP/1.1 301 Moved Permanently");
     header('Location: https://' . str_replace('www.','',$_SERVER['HTTP_HOST']) . $_SERVER['REQUEST_URI']);
     exit();

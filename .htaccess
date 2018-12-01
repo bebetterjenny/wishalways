@@ -174,8 +174,6 @@
 ############################################
 ## rewrite everything else to index.php
 
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://wishalways.com/$1 [L,R=301]
     RewriteRule .* index.php [L]
 
 </IfModule>
